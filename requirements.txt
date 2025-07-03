@@ -1,0 +1,43 @@
+# Core Flask and API dependencies
+flask
+flask-jwt-extended
+flasgger
+python-dotenv
+pymongo
+requests
+
+# NLP and keyword extraction
+keybert
+scikit-learn
+langdetect>=1.0.9            # Language detection for mixed content
+pyvi==0.1                    # Vietnamese text processing and tokenization
+# underthesea==6.8.3          # Vietnamese NLP library (optional but recommended). Comment cause of error meturin
+nltk==3.9b1                  # Enhanced stopwords for English
+
+# Required NLP libraries (actively used in codebase)
+spacy>=3.0.0                 # Used in unified_nlp_service.py for English text processing
+
+# Topic modeling (optional but used when topics are requested)
+# Comment these out if you never use topic modeling features
+bertopic==0.16.0             # Used in topic_modeling_service.py
+transformers                 # Required by sentence-transformers and KeyBERT
+sentence-transformers>=3.0.0,<4.0.0  # Required by BERTopic
+hdbscan>=0.8.29              # Required by BERTopic
+umap-learn>=0.5.3            # Required by BERTopic
+numba>=0.57.0                # Required by hdbscan
+
+# Scheduler and Telegram
+schedule
+python-telegram-bot>=21.0.1,<23.0.0
+nest-asyncio>=1.6.0
+
+# AI provider SDKs (only needed if use_ai is enabled)
+# Since use_ai=false in config, these can be commented out
+# openai==1.3.0
+# anthropic==0.7.0
+# google-generativeai==0.3.0
+
+langchain
+langchain-google-genai
+langchain_core
+langgraph

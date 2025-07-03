@@ -1,0 +1,16 @@
+{
+  "high_score_token_pattern": {
+    "description": "Pattern to match tokens that should receive high scores",
+    "pattern": "\\$[A-Za-z]{2,5}\\b",
+    "score_multiplier": 12
+  },
+  "stop_high_score_tokens": {
+    "description": "Common tokens that should not receive the high score bonus",
+    "tokens": [
+      "$btc",
+      "$eth",
+      "$usdt",
+      "$usdc"
+    ]
+  }
+}

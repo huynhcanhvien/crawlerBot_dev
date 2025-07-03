@@ -1,0 +1,62 @@
+{
+  "scheduler": {
+    "interval_seconds": 3600,
+    "enabled": true
+  },
+  "root_users": [
+    {
+      "username": "namvanhoatagvn",
+      "user_id": "1498274549057548288",
+      "enabled": true,
+      "crawl_config": {
+        "depth": 1,
+        "max_following": 900,
+        "max_tweets": 25,
+        "include_root": false,
+        "concurrent_threads": 9
+      },
+      "analysis_config": {
+        "top_n": 20,
+        "tweets_per_user": 10,
+        "use_percentage": true,
+        "percent_tweets_per_user": 60,
+        "time_filter": {
+          "enabled": true,
+          "days_recent": 30
+        },
+        "use_ai": false,
+        "ai_provider": "gemini"
+      },
+      "telegram_config": {
+        "enabled": true,
+        "post_after_analysis": true,
+        "include_topics": false
+      }
+    }
+  ],
+  "default_config": {
+    "crawl": {
+      "depth": 1,
+      "max_following": 100,
+      "max_tweets": 20,
+      "include_root": true,
+      "concurrent_threads": 3
+    },
+    "analysis": {
+      "top_n": 20,
+      "tweets_per_user": 10,
+      "use_percentage": false,
+      "percent_tweets_per_user": 40,
+      "time_filter": {
+        "enabled": false,
+        "days_recent": 30
+      },
+      "use_ai": false
+    },
+    "telegram": {
+      "enabled": true,
+      "post_after_analysis": true,
+      "include_topics": false
+    }
+  }
+}
